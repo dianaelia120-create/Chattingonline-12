@@ -3,185 +3,130 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatOnline - Learn Swahili</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatOnline</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f5f7fb;color:#222}
-header{background:#126b48;color:white;padding:22px;text-align:center}
-header h1{font-size:30px}
-header p{margin-top:7px}
-.hero{text-align:center;padding:35px 18px}
-.hero h2{font-size:27px;margin-bottom:12px}
-.hero p{color:#666;line-height:1.6}
-.container{max-width:750px;margin:auto;padding:15px}
-.section-title{margin:20px 0}
-.profile{background:white;padding:16px;border-radius:12px;margin-bottom:12px;display:flex;align-items:center;gap:13px;box-shadow:0 2px 8px #ddd}
-.avatar{width:52px;height:52px;border-radius:50%;background:#e1eee8;display:grid;place-items:center;font-size:25px}
-.info{flex:1}
-.info p{font-size:13px;color:#666;margin-top:5px}
-.online{color:#16834c;font-size:12px;margin-top:5px}
-button{border:0;border-radius:8px;padding:12px 16px;background:#16834c;color:white;font-weight:bold;cursor:pointer}
-button:hover{opacity:.9}
-.price-box,.lesson{background:white;padding:22px;border-radius:12px;margin:22px 0;box-shadow:0 2px 8px #ddd}
-.price{text-align:center;color:#16834c;font-size:32px;font-weight:bold;margin:12px}
-input,select{width:100%;padding:13px;margin:8px 0;border:1px solid #ccc;border-radius:8px}
-label{display:block;margin-top:12px;font-size:14px;font-weight:bold}
-.modal{display:none;position:fixed;inset:0;background:#0009;align-items:center;justify-content:center;padding:15px;overflow:auto}
-.modal-content{background:white;padding:23px;border-radius:14px;width:100%;max-width:430px;max-height:90vh;overflow:auto}
-.modal-content h2{margin-bottom:12px}
-.note{font-size:13px;color:#666;line-height:1.6;margin:10px 0}
-.close{background:#666;margin-top:10px;width:100%}
-.submit{width:100%;margin-top:12px}
-footer{background:#17251f;color:white;text-align:center;padding:22px;margin-top:30px;font-size:13px;line-height:1.8}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f4f7fb;color:#172b40}
+header{background:#102b46;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;font-weight:bold} .logo span{color:#ffbf47}
+header button,.start{border:0;padding:12px 18px;border-radius:8px;background:#ffbf47;font-weight:bold;cursor:pointer}
+.hero{background:linear-gradient(120deg,#102b46,#1769aa);color:white;padding:50px 6%}
+.hero h1{font-size:42px;margin:0 0 12px}
+.hero p{line-height:1.6;color:#e2edf8}
+main{padding:30px 5%;max-width:1200px;margin:auto}
+h2{margin-bottom:5px}.muted{color:#718096;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}
+.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 3px 15px #0001}
+.card img{width:100%;height:190px;object-fit:cover}
+.info{padding:13px}
+.info h3{margin:0 0 7px}
+.online{color:#159b68;font-size:12px;font-weight:bold}
+.start{background:#1769aa;color:white;width:100%;margin-top:12px}
+.note{font-size:11px;color:#888;text-align:center;margin-top:8px}
+.steps{background:white;padding:20px;border-radius:12px;margin-top:30px;line-height:1.8}
+footer{background:#102b46;color:white;padding:25px;text-align:center;margin-top:35px}
+.modal{display:none;position:fixed;inset:0;background:#0009;align-items:center;justify-content:center;padding:15px}
+.modalbox{background:white;padding:24px;border-radius:14px;width:100%;max-width:420px;max-height:90vh;overflow:auto}
+.modalbox input,.modalbox select{width:100%;padding:12px;margin:7px 0 14px;border:1px solid #ccd5df;border-radius:7px}
+.modalbox button{padding:12px;border:0;border-radius:7px;background:#1769aa;color:white;font-weight:bold;width:100%;margin-top:8px}
+.close{background:#ddd!important;color:#222!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:32px}}
+@media(max-width:420px){.grid{gap:10px}.card img{height:145px}.info{padding:10px}}
 </style>
 </head>
-
 <body>
-
 <header>
-<h1>CHATONLINE</h1>
-<p>Connect • Chat • Learn Swahili 🇹🇿</p>
+ <div class="logo">Chat<span>Online</span></div>
+ <button onclick="join()">Join ChatOnline</button>
 </header>
 
 <section class="hero">
-<h2>Meet the World. Learn Swahili.</h2>
-<p>Connect with people from different countries.<br>
-Practice Swahili with Tanzanian teachers through online conversations.</p>
+ <h1>Meet. Chat. Learn Swahili.</h1>
+ <p>Connect with people around the world.<br>
+ Discover new friends and practise Swahili.</p>
 </section>
 
-<main class="container">
+<main>
+ <h2>People to meet 🌍</h2>
+ <p class="muted">Explore people from different countries.</p>
 
-<h3 class="section-title">People Online</h3>
-<p class="note">These are sample profiles for preview. Real profiles will appear after user accounts are connected.</p>
+ <div class="grid">
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500" alt="Sample profile">
+ <div class="info"><h3>Anna 🇫🇷</h3><div class="online">● Online</div><button class="start" onclick="join()">Start Chat</button><div class="note">Sample profile</div></div>
+ </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500" alt="Sample profile">
+ <div class="info"><h3>David 🇺🇸</h3><div class="online">● Online</div><button class="start" onclick="join()">Start Chat</button><div class="note">Sample profile</div></div>
+ </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500" alt="Sample profile">
+ <div class="info"><h3>Maria 🇩🇪</h3><div class="online">● Online</div><button class="start" onclick="join()">Start Chat</button><div class="note">Sample profile</div></div>
+ </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500" alt="Sample profile">
+ <div class="info"><h3>James 🇬🇧</h3><div class="online">● Online</div><button class="start" onclick="join()">Start Chat</button><div class="note">Sample profile</div></div>
+ </div>
+ </div>
 
-<div class="profile">
-<div class="avatar">👩🏻</div>
-<div class="info">
-<strong>Anna</strong>
-<p>France 🇫🇷</p>
-<div class="online">● Sample profile</div>
-</div>
-<button onclick="openTeacher()">Start Chat</button>
-</div>
-
-<div class="profile">
-<div class="avatar">👨🏻</div>
-<div class="info">
-<strong>David</strong>
-<p>USA 🇺🇸</p>
-<div class="online">● Sample profile</div>
-</div>
-<button onclick="openTeacher()">Start Chat</button>
-</div>
-
-<div class="profile">
-<div class="avatar">👩🏽</div>
-<div class="info">
-<strong>Maria</strong>
-<p>Germany 🇩🇪</p>
-<div class="online">● Sample profile</div>
-</div>
-<button onclick="openTeacher()">Start Chat</button>
-</div>
-
-<div class="price-box">
-<h2>Become a Tanzanian Teacher</h2>
-<div class="price">TSh 14,500</div>
-<p style="text-align:center">One-time teacher registration fee.</p>
-<p class="note">Register as a teacher to offer Swahili lessons and conversations to international learners.</p>
-<button class="submit" onclick="openTeacher()">Register as Teacher</button>
-</div>
-
-<div class="price-box">
-<h2 style="text-align:center">Chat Pricing</h2>
-<div class="price">$3 / 5 minutes</div>
-<p style="text-align:center">10 minutes = $6</p>
-<p style="text-align:center">15 minutes = $9</p>
-<p class="note">International learners can join for free. Conversation charges apply when using a teacher's service.</p>
-</div>
-
-<div class="lesson">
-<h3>📚 Learn Swahili - Free Example</h3>
-<p style="line-height:2;margin-top:10px">
-Hello = Jambo<br>
-How are you? = Habari yako?<br>
-I am fine = Sijambo<br>
-Thank you = Asante<br>
-Goodbye = Kwaheri
-</p>
-</div>
-
+ <div class="steps">
+ <h2>How ChatOnline works</h2>
+ 🌍 Browse profiles for free.<br>
+ 🎓 Tanzanian teachers register once for TSh 14,500.<br>
+ 💬 Foreign learners register for free.<br>
+ 💵 Teacher conversation rate: $3 per 5 minutes.
+ </div>
 </main>
 
-<div class="modal" id="teacherModal">
-<div class="modal-content">
-<h2>Teacher Registration</h2>
-<p class="note">Registration fee: TSh 14,500 (one time).</p>
+<footer>ChatOnline · Meet. Chat. Learn Swahili.</footer>
 
-<form id="teacherForm">
-<label>Full Name</label>
-<input id="name" required placeholder="Enter your full name">
-
-<label>Email Address</label>
-<input id="email" type="email" required placeholder="Enter your email">
-
-<label>Phone Number</label>
-<input id="phone" required placeholder="Your phone number">
-
-<label>Payment Network</label>
-<select id="network" required>
-<option value="">Select network</option>
-<option>Tigo Pesa</option>
-<option>M-Pesa</option>
-<option>Airtel Money</option>
-<option>HaloPesa</option>
-<option>Mixx by Yas</option>
-<option>TTCL Pesa</option>
-</select>
-
-<p class="note">
-Send TSh 14,500 to the Tigo Pesa number below. For payments through other networks, payment collection arrangements must first be confirmed.
-</p>
-
-<div style="background:#e8f5ed;padding:15px;border-radius:9px;text-align:center">
-<strong>Tigo Pesa payment number</strong>
-<h2 style="margin:8px 0">0672 902 982</h2>
-<strong>Account name: Diana Elia</strong>
+<div class="modal" id="modal">
+ <div class="modalbox">
+ <h2>Join ChatOnline</h2>
+ <p>Choose your account type.</p>
+ <button onclick="teacher()">I am a Swahili teacher</button>
+ <button onclick="learner()">I want to learn Swahili</button>
+ <button class="close" onclick="document.getElementById('modal').style.display='none'">Close</button>
+ <div id="form"></div>
+ </div>
 </div>
-
-<label>Transaction ID</label>
-<input id="transaction" required placeholder="Enter payment transaction ID">
-
-<button class="submit" type="submit">Submit Registration</button>
-</form>
-
-<p id="status" class="note"></p>
-<button class="close" onclick="closeTeacher()">Close</button>
-</div>
-</div>
-
-<footer>
-<strong>CHATONLINE © 2026</strong><br>
-Learn Swahili with Tanzanian Teachers 🇹🇿<br>
-International learners join for free.
-</footer>
 
 <script>
-function openTeacher(){
-document.getElementById("teacherModal").style.display="flex";
+function join(){document.getElementById('modal').style.display='flex'}
+function teacher(){
+document.getElementById('form').innerHTML=`
+<h3>Teacher registration</h3>
+<p>One-time fee: TSh 14,500</p>
+<form onsubmit="pending(event)">
+<input required placeholder="Full name">
+<input required type="email" placeholder="Email">
+<input required placeholder="Phone number">
+<select required><option value="">Choose payment network</option><option>Tigo Pesa / Mixx by Yas</option><option>M-Pesa</option><option>Airtel Money</option><option>HaloPesa</option><option>TTCL Pesa</option></select>
+<p><b>Tigo Pesa: 0672 902 982</b><br>Account: Diana Elia</p>
+<input required placeholder="Transaction ID">
+<button type="submit">Submit for verification</button>
+</form>
+<p id="result"></p>
+<p>Account remains pending until payment is verified.</p>`;
 }
-function closeTeacher(){
-document.getElementById("teacherModal").style.display="none";
+function learner(){
+document.getElementById('form').innerHTML=`
+<h3>Free learner registration</h3>
+<form onsubmit="pending(event)">
+<input required placeholder="Full name">
+<input required type="email" placeholder="Email">
+<input required placeholder="Country">
+<button type="submit">Submit</button>
+</form><p id="result"></p>`;
 }
-
-document.getElementById("teacherForm").addEventListener("submit",function(e){
+function pending(e){
 e.preventDefault();
-document.getElementById("status").textContent=
-"Your registration details have been entered in this preview. Payment and account activation are not yet connected. Please wait for payment verification.";
-});
+document.getElementById('result').innerText=
+'Your details were entered in this demo. No account has been created and no payment has been verified yet.';
+}
 </script>
-
 </body>
-  </html>
+</html>
+
   
