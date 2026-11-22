@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatOnline</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6fb;color:#222}
+header{background:#1769e0;color:white;padding:22px;text-align:center}
+header h1{margin:0}
+header p{margin-bottom:0}
+.container{max-width:850px;margin:25px auto;padding:15px}
+h2{text-align:center}
+.card{background:white;padding:18px;margin:14px 0;border-radius:12px;box-shadow:0 2px 9px #ddd;display:flex;align-items:center;gap:15px}
+.avatar{width:55px;height:55px;border-radius:50%;background:#dce8ff;display:grid;place-items:center;font-size:25px}
+.info{flex:1}
+.online{color:green;font-size:13px}
+button{background:#1769e0;color:white;border:0;padding:12px 18px;border-radius:7px;cursor:pointer}
+.price{text-align:center;background:white;padding:20px;border-radius:12px;margin-top:25px}
+.modal{display:none;position:fixed;inset:0;background:#0009;align-items:center;justify-content:center;padding:15px}
+.modal-content{background:white;padding:22px;border-radius:12px;width:100%;max-width:400px}
+input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:6px}
+.close{background:#777;margin-top:8px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>ChatOnline</h1>
+<p>Meet people. Learn languages. Make friends.</p>
+</header>
+
+<div class="container">
+<h2>People Online</h2>
+<p style="text-align:center">Sample profiles for website preview</p>
+
+<div class="card">
+<div class="avatar">👩🏻</div>
+<div class="info">
+<strong>Anna</strong><br>
+France 🇫🇷<br>
+<span class="online">● Sample profile</span>
+</div>
+<button onclick="showRegistration()">Start Chat</button>
+</div>
+
+<div class="card">
+<div class="avatar">👨🏽</div>
+<div class="info">
+<strong>David</strong><br>
+USA 🇺🇸<br>
+<span class="online">● Sample profile</span>
+</div>
+<button onclick="showRegistration()">Start Chat</button>
+</div>
+
+<div class="card">
+<div class="avatar">👩🏼</div>
+<div class="info">
+<strong>Maria</strong><br>
+Germany 🇩🇪<br>
+<span class="online">● Sample profile</span>
+</div>
+<button onclick="showRegistration()">Start Chat</button>
+</div>
+
+<div class="price">
+<h3>Teacher Registration</h3>
+<h2>TSh 14,500</h2>
+<p>One-time registration fee for teachers.</p>
+<p>Foreign students can join for free.</p>
+<h3>Chat Price</h3>
+<p>$3 for every 5 minutes</p>
+</div>
+</div>
+
+<div class="modal" id="registration">
+<div class="modal-content">
+<h2>Teacher Registration</h2>
+<p>Register to start chatting with users.</p>
+<p><strong>Registration fee: TSh 14,500</strong></p>
+<p>Payment network: Tigo Pesa</p>
+<p><strong>Number: 0672902982</strong></p>
+<input placeholder="Your full name">
+<input placeholder="Your email address">
+<input placeholder="Payment transaction ID">
+<button onclick="alert('This is a preview. Payment has not been verified.')">Submit Registration</button>
+<button class="close" onclick="closeRegistration()">Close</button>
+</div>
+</div>
+
+<script>
+function showRegistration(){
+document.getElementById("registration").style.display="flex";
+}
+function closeRegistration(){
+document.getElementById("registration").style.display="none";
+}
+</script>
+
+</body>
+</html>
