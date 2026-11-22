@@ -1,120 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHATONLINE - Learn Swahili Online | Chat With Tanzanians</title>
-<meta name="description" content="Learn Swahili Online. Chat with real Tanzanians. Pay 14,500 TZS to register and start speaking Swahili in 30 days.">
+<title>ChatOnline - Learn Swahili</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#fff7ed;color:#222}
-header{background:#16a34a;color:white;padding:20px;text-align:center}
-header h1{font-size:32px;letter-spacing:2px}
-header p{margin-top:8px}
-.hero{padding:30px 20px;text-align:center}
-.hero h2{font-size:28px;margin-bottom:10px}
-.hero p{color:#555;line-height:1.6}
-.price-box{background:white;border:2px solid #16a34a;border-radius:15px;max-width:450px;margin:20px auto;padding:25px;box-shadow:0 10px 25px rgba(0,0,0,0.1)}
-.price{font-size:40px;font-weight:bold;color:#16a34a}
-.btn{background:#16a34a;color:white;border:none;padding:15px;width:100%;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:15px}
-.btn2{background:#111;color:white}
-input{width:100%;padding:12px;margin-top:10px;border:1px solid #ddd;border-radius:10px}
-.lesson{background:#fef3c7;padding:20px;margin:20px;border-radius:15px}
-.chat-box{background:white;border:1px solid #ddd;border-radius:15px;max-width:500px;margin:20px auto;padding:15px}
-.msg{background:#dcfce7;padding:10px;border-radius:10px;margin:8px 0}
-.msg2{background:#f1f5f9;padding:10px;border-radius:10px;margin:8px 0}
-footer{background:#111;color:#aaa;text-align:center;padding:20px;font-size:13px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#222}
+header{background:#126b48;color:white;padding:22px;text-align:center}
+header h1{font-size:30px}
+header p{margin-top:7px}
+.hero{text-align:center;padding:35px 18px}
+.hero h2{font-size:27px;margin-bottom:12px}
+.hero p{color:#666;line-height:1.6}
+.container{max-width:750px;margin:auto;padding:15px}
+.section-title{margin:20px 0}
+.profile{background:white;padding:16px;border-radius:12px;margin-bottom:12px;display:flex;align-items:center;gap:13px;box-shadow:0 2px 8px #ddd}
+.avatar{width:52px;height:52px;border-radius:50%;background:#e1eee8;display:grid;place-items:center;font-size:25px}
+.info{flex:1}
+.info p{font-size:13px;color:#666;margin-top:5px}
+.online{color:#16834c;font-size:12px;margin-top:5px}
+button{border:0;border-radius:8px;padding:12px 16px;background:#16834c;color:white;font-weight:bold;cursor:pointer}
+button:hover{opacity:.9}
+.price-box,.lesson{background:white;padding:22px;border-radius:12px;margin:22px 0;box-shadow:0 2px 8px #ddd}
+.price{text-align:center;color:#16834c;font-size:32px;font-weight:bold;margin:12px}
+input,select{width:100%;padding:13px;margin:8px 0;border:1px solid #ccc;border-radius:8px}
+label{display:block;margin-top:12px;font-size:14px;font-weight:bold}
+.modal{display:none;position:fixed;inset:0;background:#0009;align-items:center;justify-content:center;padding:15px;overflow:auto}
+.modal-content{background:white;padding:23px;border-radius:14px;width:100%;max-width:430px;max-height:90vh;overflow:auto}
+.modal-content h2{margin-bottom:12px}
+.note{font-size:13px;color:#666;line-height:1.6;margin:10px 0}
+.close{background:#666;margin-top:10px;width:100%}
+.submit{width:100%;margin-top:12px}
+footer{background:#17251f;color:white;text-align:center;padding:22px;margin-top:30px;font-size:13px;line-height:1.8}
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>CHATONLINE</h1>
-<p>Learn Swahili With Real Tanzanians 🇹🇿</p>
+<p>Connect • Chat • Learn Swahili 🇹🇿</p>
 </header>
 
-<div class="hero">
-<h2>Speak Swahili in 30 Days!</h2>
-<p>Chat, learn, practice every day with your Tanzanian teacher.<br>
-Daily lessons • Live chat • Voice practice • Private group</p>
+<section class="hero">
+<h2>Meet the World. Learn Swahili.</h2>
+<p>Connect with people from different countries.<br>
+Practice Swahili with Tanzanian teachers through online conversations.</p>
+</section>
+
+<main class="container">
+
+<h3 class="section-title">People Online</h3>
+<p class="note">These are sample profiles for preview. Real profiles will appear after user accounts are connected.</p>
+
+<div class="profile">
+<div class="avatar">👩🏻</div>
+<div class="info">
+<strong>Anna</strong>
+<p>France 🇫🇷</p>
+<div class="online">● Sample profile</div>
+</div>
+<button onclick="openTeacher()">Start Chat</button>
+</div>
+
+<div class="profile">
+<div class="avatar">👨🏻</div>
+<div class="info">
+<strong>David</strong>
+<p>USA 🇺🇸</p>
+<div class="online">● Sample profile</div>
+</div>
+<button onclick="openTeacher()">Start Chat</button>
+</div>
+
+<div class="profile">
+<div class="avatar">👩🏽</div>
+<div class="info">
+<strong>Maria</strong>
+<p>Germany 🇩🇪</p>
+<div class="online">● Sample profile</div>
+</div>
+<button onclick="openTeacher()">Start Chat</button>
 </div>
 
 <div class="price-box">
-<h3 style="text-align:center">JOIN NOW - ONE TIME FEE</h3>
-<div class="price" style="text-align:center">14,500 TZS</div>
-<p style="text-align:center;color:#555">Pay to register & unlock the system</p>
+<h2>Become a Tanzanian Teacher</h2>
+<div class="price">TSh 14,500</div>
+<p style="text-align:center">One-time teacher registration fee.</p>
+<p class="note">Register as a teacher to offer Swahili lessons and conversations to international learners.</p>
+<button class="submit" onclick="openTeacher()">Register as Teacher</button>
+</div>
 
-<h4 style="margin-top:15px">STEP 1: PAY VIA M-PESA</h4>
-<p style="font-size:14px;color:#555;line-height:1.6">
-1. Go to M-Pesa - Send Money<br>
-2. Send <b>14,500 TZS</b> to:<br>
-<b style="font-size:20px;color:#000">WEKA NAMBARI YAKO HAPA</b><br>
-Name: Diana Elia<br>
-3. Copy your transaction code
-</p>
-
-<h4 style="margin-top:15px">STEP 2: REGISTER</h4>
-<input type="text" id="name" placeholder="Your Full Name">
-<input type="text" id="country" placeholder="Your Country - e.g USA, UK, Germany">
-<input type="text" id="code" placeholder="M-Pesa Transaction Code">
-<button class="btn" onclick="register()">REGISTER & ENTER CHAT →</button>
-<p id="msg" style="text-align:center;margin-top:10px;color:green;font-weight:bold"></p>
+<div class="price-box">
+<h2 style="text-align:center">Chat Pricing</h2>
+<div class="price">$3 / 5 minutes</div>
+<p style="text-align:center">10 minutes = $6</p>
+<p style="text-align:center">15 minutes = $9</p>
+<p class="note">International learners can join for free. Conversation charges apply when using a teacher's service.</p>
 </div>
 
 <div class="lesson">
-<h3>📚 Today's Free Lesson - Try It!</h3>
-<p style="margin-top:10px;line-height:1.8">
-<b>Hello = Jambo / Habari</b><br>
-<b>How are you? = Habari yako?</b><br>
-<b>I am fine = Nzuri sana</b><br>
-<b>Thank you = Asante</b><br>
-<b>Big = Kubwa - 大 dà</b><br>
-<b>Small = Ndogo - 小 xiǎo</b>
+<h3>📚 Learn Swahili - Free Example</h3>
+<p style="line-height:2;margin-top:10px">
+Hello = Jambo<br>
+How are you? = Habari yako?<br>
+I am fine = Sijambo<br>
+Thank you = Asante<br>
+Goodbye = Kwaheri
 </p>
 </div>
 
-<div class="chat-box" id="chatSection" style="display:none">
-<h3>💬 CHATONLINE - Live Chat</h3>
-<div id="chatArea">
-<div class="msg"><b>Teacher Diana:</b> Hello! Welcome to CHATONLINE ❤️ What is your name?</div>
+</main>
+
+<div class="modal" id="teacherModal">
+<div class="modal-content">
+<h2>Teacher Registration</h2>
+<p class="note">Registration fee: TSh 14,500 (one time).</p>
+
+<form id="teacherForm">
+<label>Full Name</label>
+<input id="name" required placeholder="Enter your full name">
+
+<label>Email Address</label>
+<input id="email" type="email" required placeholder="Enter your email">
+
+<label>Phone Number</label>
+<input id="phone" required placeholder="Your phone number">
+
+<label>Payment Network</label>
+<select id="network" required>
+<option value="">Select network</option>
+<option>Tigo Pesa</option>
+<option>M-Pesa</option>
+<option>Airtel Money</option>
+<option>HaloPesa</option>
+<option>Mixx by Yas</option>
+<option>TTCL Pesa</option>
+</select>
+
+<p class="note">
+Send TSh 14,500 to the Tigo Pesa number below. For payments through other networks, payment collection arrangements must first be confirmed.
+</p>
+
+<div style="background:#e8f5ed;padding:15px;border-radius:9px;text-align:center">
+<strong>Tigo Pesa payment number</strong>
+<h2 style="margin:8px 0">0672 902 982</h2>
+<strong>Account name: Diana Elia</strong>
 </div>
-<input type="text" id="chatInput" placeholder="Type in English or Swahili...">
-<button class="btn btn2" onclick="sendChat()">Send Message</button>
-<p style="font-size:12px;color:#777;margin-top:10px">Teacher will reply soon. Practice every day!</p>
+
+<label>Transaction ID</label>
+<input id="transaction" required placeholder="Enter payment transaction ID">
+
+<button class="submit" type="submit">Submit Registration</button>
+</form>
+
+<p id="status" class="note"></p>
+<button class="close" onclick="closeTeacher()">Close</button>
+</div>
 </div>
 
 <footer>
-CHATONLINE © 2026 - Learn Swahili Online<br>
-Tanzania | Contact on WhatsApp after payment
+<strong>CHATONLINE © 2026</strong><br>
+Learn Swahili with Tanzanian Teachers 🇹🇿<br>
+International learners join for free.
 </footer>
 
 <script>
-function register(){
-  let n = document.getElementById('name').value;
-  let c = document.getElementById('code').value;
-  if(n==="" || c===""){
-    alert("Please enter your name and M-Pesa code");
-    return;
-  }
-  document.getElementById('msg').innerText = "Welcome " + n + "! Your registration is received. Chat is now unlocked!";
-  document.getElementById('chatSection').style.display = "block";
-  document.getElementById('chatSection').scrollIntoView();
+function openTeacher(){
+document.getElementById("teacherModal").style.display="flex";
 }
-function sendChat(){
-  let t = document.getElementById('chatInput').value;
-  if(t==="") return;
-  let div = document.createElement('div');
-  div.className = 'msg2';
-  div.innerHTML = "<b>You:</b> " + t;
-  document.getElementById('chatArea').appendChild(div);
-  document.getElementById('chatInput').value = "";
-  setTimeout(()=>{
-    let r = document.createElement('div');
-    r.className = 'msg';
-    r.innerHTML = "<b>Teacher Diana:</b> Good! In Swahili we say... Keep practicing! Send me a voice note too.";
-    document.getElementById('chatArea').appendChild(r);
-  }, 1000);
+function closeTeacher(){
+document.getElementById("teacherModal").style.display="none";
 }
+
+document.getElementById("teacherForm").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("status").textContent=
+"Your registration details have been entered in this preview. Payment and account activation are not yet connected. Please wait for payment verification.";
+});
 </script>
+
 </body>
-</html>
+  </html>
+  
